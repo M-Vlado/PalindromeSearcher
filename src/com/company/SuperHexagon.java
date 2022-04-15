@@ -5,7 +5,9 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -117,6 +119,7 @@ public class SuperHexagon {
       }
     }
 
+
   }
 
 
@@ -129,6 +132,8 @@ public class SuperHexagon {
     jFrame.setLocationRelativeTo(null);
     jFrame.setVisible(true);
     jFrame.pack();
+
+
   }
 
   static class ImagePanel extends JPanel {
