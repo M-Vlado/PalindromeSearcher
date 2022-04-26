@@ -30,4 +30,12 @@ public class Counter {
   public void reset(){
     this.counter = initValue;
   }
+
+  @Override
+  public String toString() {
+    return "Counter{" +
+        "counter=" + counter +
+        ", initValue=" + initValue +
+        '}';
+  }
 }

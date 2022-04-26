@@ -1,5 +1,6 @@
 package com.company.xx;
 
+import com.company.counter.Counter;
 import java.util.ArrayList;
 import java.util.List;
 
