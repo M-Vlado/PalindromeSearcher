@@ -15,12 +15,11 @@
     <label>Description: </label>
     <input th:field="*{description}"><br>
     <label>Choose assignee: </label>
-    <select name="Assignee">
-        <option th:each="assignee : ${assigneesList}" th:text="${assignee.name}" th:value="${assignee.id}"></option>
+    <select name="assignee">
+        <option th:each="assignee2 : ${assignees}" th:text="${assignee2.name}" th:value="${assignee2.id}" ></option>
     </select><br>
     <label>DueDate: </label>
-    <p>Please use this format of date <strong>yyyy-MM-dd</strong></p>
-    <input th:field="*{dueDate}"><br>
+    <input type="date" required pattern="\d{4}-\d{2}-\d{2}" th:field="*{dueDate}"><br>
 
     <label>Urgent:</label>
     <input type="checkbox" th:field="*{urgent}"><br>

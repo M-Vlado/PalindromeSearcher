@@ -20,8 +20,7 @@
         <option th:each="assignee : ${assigneesList}" th:text="${assignee.name}" th:value="${assignee.id}"></option>
     </select><br>
     <label>DueDate: </label>
-    <p>Please use this format of date <strong>yyyy-MM-dd</strong></p>
-    <input th:field="*{dueDate}"><br>
+    <input type="date" required pattern="\d{4}-\d{2}-\d{2}" th:field="*{dueDate}"><br>
 
     <input th:type="submit" th:value="Submit">
 
