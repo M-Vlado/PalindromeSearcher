@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo CRUD App</title>
+</head>
+<body>
+<strong>ID: </strong><span th:text="${todoToShow.id}"></span><br>
+<strong>Title: </strong><span th:text="${todoToShow.title}"></span><br>
+<strong>Content: </strong><span th:text="${todoToShow.content}"></span><br>
+<strong>Description: </strong><span th:text="${todoToShow.description}"></span><br>
+<strong>Date of creation: </strong><span th:text="${todoToShow.creationDate}"></span><br>
+<strong>Urgent: </strong><span th:text="${todoToShow.urgent}"></span><br>
+<strong>Done: </strong><span th:text="${todoToShow.urgent}"></span><br>
+<strong>Assignee: </strong><span th:text="${todoToShow.assignee.name}"></span><br>
+<strong>DueDate: </strong><span th:text="${todoToShow.dueDate}"></span><br>
+
+
+</body>
+</html>

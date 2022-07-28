@@ -1,0 +1,21 @@
+/*GENERAL*/
+body {
+    color: #323232;
+    background: #eeefed;
+    font-family: "Times New Roman";
+    -webkit-font-smooting: antialiased;
+}
+
+.table {
+    padding: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+.table_row {
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid black;
+}

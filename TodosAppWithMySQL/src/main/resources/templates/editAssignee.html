@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+
+    <title>Todo CRUD App</title>
+</head>
+<body>
+<h1>Edit Assignee</h1>
+
+<form th:action="@{/todo/assignees/{id}/edit (id = ${assigneeToChange.id})}" th:object="${assigneeToChange}"
+      th:method="post">
+    <label>Assignee name: </label>
+    <input th:type="text" th:field="*{name}">
+    <label>Assignee email: </label>
+    <input th:type="email" th:field="*{email}">
+    <input th:type="submit" th:value="Edit">
+
+</form>
+</body>
+</html>

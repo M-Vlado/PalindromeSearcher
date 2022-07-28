@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+
+    <title>Todo CRUD App</title>
+
+</head>
+<body>
+
+<table>
+    <thead>
+    <th class="table">ID</th>
+    <th class="table">Date</th>
+    <th class="table">Title</th>
+    <th class="table">Content</th>
+    <th class="table">Description</th>
+    <th class="table">DueDate</th>
+    <th class="table">Done</th>
+    <th class="table">Urgent</th>
+    </thead>
+    <tbody>
+    <tr th:each="todo : ${assignedTodos}">
+        <td class="table_row" th:text="${todo.id}"></td>
+        <td class="table_row" th:text="${todo.creationDate}"></td>
+        <td class="table_row"><a th:text="${todo.title}" th:href="@{/todo/{id} (id = ${todo.id})}"></a></td>
+        <td class="table_row" th:text="${todo.content}"></td>
+        <td class="table_row" th:text="${todo.description}"></td>
+        <td class="table_row" th:text="${todo.dueDate}"></td>
+        <td class="table_row" th:text="${todo.done}"></td>
+        <td class="table_row" th:text="${todo.urgent}"></td>
+        <td class="table_row"><a th:text="delete" th:href="@{/todo/{id}/delete (id = ${todo.id})}"></a></td>
+        <td class="table_row"><a th:text="edit" th:href="@{/todo/{id}/edit (id = ${todo.id})}"></a></td>
+    </tr>
+    <tr th:if="(${assignedTodos.size()} == 0)">
+        <td class="table_row">-----</td>
+        <td class="table_row">List of Todos is empty!</td>
+        <td class="table_row">-----</td>
+        <td class="table_row">-----</td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+
+    <title>Todo CRUD App</title>
+</head>
+<body>
+<h1>Assignee list</h1>
+
+<a href="" th:href="@{/todo/assignee/add}">Add new Assignee</a>
+<table>
+    <thead>
+    <th class="table">Assignee ID</th>
+    <th class="table">Assignee Name</th>
+    <th class="table">Assignee Email</th>
+    </thead>
+    <tbody>
+    <tr th:each="assignee : ${assigneesList}">
+        <td class="table_row" th:text="${assignee.id}"></td>
+        <td class="table_row"><a th:text="${assignee.name}"
+                                 th:href="@{/todo/assignees/{id}/show-Todos (id = ${assignee.id})}"></a></td>
+        <td class="table_row" th:text="${assignee.email}"></td>
+        <td class="table_row"><a th:text="edit" th:href="@{/todo/assignees/{id}/edit (id = ${assignee.id})}"></a></td>
+        <td class="table_row"><a th:text="delete" th:href="@{/todo/assignees/{id}/delete (id = ${assignee.id})}"></a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
